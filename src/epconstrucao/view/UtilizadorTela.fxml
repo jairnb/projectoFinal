@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="UtilizadorAnchorPane" prefHeight="722.0" prefWidth="1153.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epconstrucao.controller.UtilizadorTelaController">
+    <stylesheets>
+        <URL value="@/epconstrucao/content/estilo.css" />
+    </stylesheets>
+   <children>
+      <Group layoutX="-296.0" layoutY="-83.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <JFXButton fx:id="btnEditar" layoutX="1224.0" layoutY="94.0" onAction="#editarUtilizador" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: gray;" styleClass="btn" stylesheets="@../content/estilo.css" text="Editar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/KHAP7587.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnAdicionar" layoutX="1031.0" layoutY="94.0" onAction="#adicionarUtilizador" prefHeight="25.0" prefWidth="167.0" style="-fx-background-color: gray;" styleClass="btn" stylesheets="@../content/estilo.css" text="Adicionar Utilizador" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/EIXG5551.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button" fx:id="btnApagar" layoutX="1332.0" layoutY="94.0" onAction="#removerUtilizador" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: red;" stylesheets="@../content/estilo.css" text="Apagar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/LSDM8845.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Group>
+      <TableView fx:id="TabelaUtilizador" layoutX="68.0" layoutY="52.0" prefHeight="710.0" prefWidth="1139.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <columns>
+          <TableColumn fx:id="ColunaCodigo" prefWidth="137.0" text="Codigo " />
+          <TableColumn fx:id="ColunaNome" prefWidth="617.0" text="Nome" />
+            <TableColumn fx:id="ColunaSenha" prefWidth="248.0" text="Senha" visible="false" />
+            <TableColumn fx:id="ColunaTipo" prefWidth="75.0" text="Tipo" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="11.0" text="Utilizador" textFill="#ed9d14" />
+      <JFXTextField fx:id="pesquisaTextFiled" layoutX="11.0" layoutY="17.0" prefHeight="25.0" prefWidth="178.0" />
+      <JFXButton layoutX="189.0" layoutY="18.0" onAction="#pesquisarUtilizador" style="-fx-background-color: gray;" styleClass="btn" stylesheets="@../content/estilo.css" text="Pesquisar" />
+   </children>
+</AnchorPane>

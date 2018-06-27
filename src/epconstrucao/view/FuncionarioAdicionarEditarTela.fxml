@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.validation.*?>
+<?import javafx.scene.image.*?>
+<?import org.controlsfx.control.*?>
+<?import jfxtras.scene.layout.*?>
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="FuncionarioAdcionarAnchorPane" prefHeight="476.0" prefWidth="655.0" style="-fx-border-width: 5 5 5 5; -fx-border-color: #ed9d14;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epconstrucao.controller.FuncionarioAdicionarEditarTelaController">
+    <stylesheets>
+        <URL value="@/epconstrucao/content/estilo.css" />
+    </stylesheets>
+   <children>
+      <Text fill="#ed9d14" layoutX="127.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Adicionar/ Editar Funcionario" AnchorPane.bottomAnchor="366.98046875" AnchorPane.topAnchor="21.01953125" />
+      <Pane layoutX="130.0" layoutY="72.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text fill="#282727" layoutX="8.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <JFXTextField fx:id="nomeTextField" focusColor="#4d4d4d" layoutX="245.0" layoutY="72.0" prefHeight="25.0" prefWidth="244.0" />
+      <JFXTextField fx:id="emailTextfield" focusColor="#4d4d4d" layoutX="245.0" layoutY="126.0" prefHeight="25.0" prefWidth="244.0" />
+      <Pane layoutX="130.0" layoutY="126.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="8.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <Pane layoutX="130.0" layoutY="166.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIF" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <JFXTextField fx:id="nifTextField" focusColor="#4d4d4d" layoutX="245.0" layoutY="166.0" prefHeight="25.0" prefWidth="244.0" />
+      <Pane layoutX="130.0" layoutY="241.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="8.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salario" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <DatePicker fx:id="dataNascDate" layoutX="245.0" layoutY="207.0" prefHeight="25.0" prefWidth="244.0" />
+      <Pane layoutX="130.0" layoutY="204.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="7.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data N" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <JFXTextField fx:id="salarioTextFiel" focusColor="#4d4d4d" layoutX="245.0" layoutY="241.0" prefHeight="25.0" prefWidth="229.0" />
+      <Label layoutX="471.0" layoutY="240.0" style="-fx-font-size: 20;" text="\$" />
+      <Pane layoutX="130.0" layoutY="281.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="5.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serie Carteira" wrappingWidth="75.53125" />
+         </children>
+      </Pane>
+      <JFXTextField fx:id="serieCartTextField" focusColor="#4d4d4d" layoutX="245.0" layoutY="281.0" prefHeight="25.0" prefWidth="244.0" />
+      <Group layoutX="83.0" layoutY="-2.0" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="115.0">
+         <children>
+            <JFXButton fx:id="buttonCancelarAdcionarFuncionario" layoutX="310.0" layoutY="379.0" prefHeight="15.0" prefWidth="92.0" style="-fx-background-color: #f10d0d;" text="Cancelar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/XYAD6708.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buttonGuardarFuncionario" layoutX="202.0" layoutY="379.0" onAction="#ConfirmarButton" prefHeight="15.0" prefWidth="92.0" style="-fx-background-color: gray;" text="Guardar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/WGMP2600.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Group>
+      <Group>
+         <children>
+            <RadioButton fx:id="sexoFemRadioBtn" layoutX="360.0" layoutY="336.0" mnemonicParsing="false" text="Feminino" />
+            <RadioButton fx:id="sexoMasRadioBtn" layoutX="245.0" layoutY="336.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="92.0" text="Masculino" />
+         </children>
+      </Group>
+      <Pane layoutX="130.0" layoutY="332.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="7.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <Pane layoutX="130.0" layoutY="365.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="7.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <JFXComboBox fx:id="estadoComboBox" layoutX="249.0" layoutY="365.0" prefHeight="25.0" prefWidth="244.0" />
+   </children>
+</AnchorPane>

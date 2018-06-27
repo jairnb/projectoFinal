@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import org.controlsfx.control.*?>
+<?import jfxtras.scene.layout.*?>
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="FornecedorAdcionarAnchorPane" prefHeight="422.0" prefWidth="600.0" style="-fx-border-width: 5 5 5 5; -fx-border-color: #ed9d14;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epconstrucao.controller.FornecedorAdicionarTelaController">
+    <stylesheets>
+        <URL value="@/epconstrucao/content/estilo.css" />
+    </stylesheets>
+   <children>
+      <Text fill="#ed9d14" layoutX="127.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Adicionar Fornecedor" AnchorPane.bottomAnchor="366.98046875" AnchorPane.topAnchor="21.01953125" />
+      <Group layoutX="83.0" layoutY="25.0" AnchorPane.rightAnchor="115.0">
+         <children>
+            <Pane layoutX="44.0" layoutY="80.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="44.0">
+               <children>
+                  <Text fill="#282727" layoutX="8.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo" wrappingWidth="51.53125" />
+               </children>
+            </Pane>
+            <JFXTextField focusColor="#4d4d4d" layoutX="158.0" layoutY="80.0" prefHeight="25.0" prefWidth="244.0" />
+         </children>
+      </Group>
+      <Group layoutX="83.0" layoutY="47.0" AnchorPane.rightAnchor="115.0">
+         <children>
+            <Pane layoutX="44.0" layoutY="122.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+               <children>
+                  <Text layoutX="8.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" wrappingWidth="51.53125" />
+               </children>
+            </Pane>
+            <JFXTextField focusColor="#4d4d4d" layoutX="158.0" layoutY="122.0" prefHeight="25.0" prefWidth="244.0" />
+         </children>
+      </Group>
+      <Group AnchorPane.rightAnchor="110.0" />
+      <Group AnchorPane.rightAnchor="110.0" />
+      <Group AnchorPane.rightAnchor="110.0" />
+      <Group layoutX="83.0" layoutY="-2.0" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="115.0">
+         <children>
+            <JFXButton fx:id="buttonCancelarAdcionarFornecedor" layoutX="310.0" layoutY="379.0" prefHeight="15.0" prefWidth="92.0" style="-fx-background-color: #f10d0d;" text="Cancelar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/XYAD6708.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buttonGuardarFornecedor" layoutX="202.0" layoutY="379.0" prefHeight="15.0" prefWidth="92.0" style="-fx-background-color: gray;" text="Guardar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/WGMP2600.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Group>
+      <Group layoutX="83.0" layoutY="72.0" AnchorPane.rightAnchor="115.0">
+         <children>
+            <Pane layoutX="44.0" layoutY="161.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+               <children>
+                  <Text layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIF" wrappingWidth="51.53125" />
+               </children>
+            </Pane>
+            <JFXTextField focusColor="#4d4d4d" layoutX="158.0" layoutY="162.0" prefHeight="25.0" prefWidth="244.0" />
+         </children>
+      </Group>
+   </children>
+</AnchorPane>

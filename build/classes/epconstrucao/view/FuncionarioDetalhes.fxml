@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="605.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="epconstrucao.controller.FuncionarioDetalhesController">
+    <stylesheets>
+        <URL value="@/epconstrucao/content/estilo.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="182.0" fitWidth="184.0" layoutX="29.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/OPLR4304.PNG" />
+         </image>
+      </ImageView>
+      <Label fx:id="nomeLabel" layoutX="360.0" layoutY="40.0" prefHeight="25.0" prefWidth="182.0" />
+      <Pane layoutX="250.0" layoutY="40.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text fill="#282727" layoutX="8.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" layoutY="280.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="7.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" layoutY="240.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="7.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" layoutY="80.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="7.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data N" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" layoutY="200.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="8.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salario" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" layoutY="160.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIF" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <Pane layoutX="250.0" layoutY="120.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="8.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <Label fx:id="datanascLabel" layoutX="360.0" layoutY="80.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label fx:id="emailLabel" layoutX="360.0" layoutY="120.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label fx:id="nifLabel" layoutX="360.0" layoutY="160.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label fx:id="salarioLabel" layoutX="360.0" layoutY="200.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label fx:id="sexoLabel" layoutX="360.0" layoutY="240.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label fx:id="estadoLabel" layoutX="360.0" layoutY="280.0" prefHeight="25.0" prefWidth="182.0" />
+      <JFXButton fx:id="okButton" layoutX="475.0" layoutY="359.0" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: grey;" styleClass="btn" stylesheets="@../content/estilo.css" text="Ok" />
+      <Label fx:id="serieCarteira" layoutX="360.0" layoutY="320.0" prefHeight="25.0" prefWidth="182.0" />
+      <Pane layoutX="250.0" layoutY="320.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="7.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carteira N" wrappingWidth="60.53125" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

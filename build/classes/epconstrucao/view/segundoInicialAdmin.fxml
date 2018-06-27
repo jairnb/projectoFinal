@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="SegundoInicialTela" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epconstrucao.controller.SegundoInicialAdminController">
+   <children>
+      <Pane prefHeight="66.0" prefWidth="1370.0" style="-fx-background-color: white; -fx-border-width: 0 0 1 0; -fx-border-color: gray;">
+         <children>
+            <Label fx:id="nomeUserActual" layoutX="1204.0" layoutY="14.0" prefHeight="35.0" prefWidth="120.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="66.0" fitWidth="222.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/minilogo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="tipoLabel" layoutX="1204.0" layoutY="38.0" prefHeight="17.0" prefWidth="106.0" />
+         </children>
+      </Pane>
+      <Pane layoutY="66.0" prefHeight="764.0" prefWidth="216.0" style="-fx-background-color: #ed9d14;">
+         <children>
+            <JFXButton onAction="#PaginaInicial" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="Pagina Inicial" textFill="WHITE" />
+            <JFXButton layoutY="171.0" onAction="#Fornecedor" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="Fornecedor" textFill="WHITE" />
+            <JFXButton fx:id="buttonFuncionario" layoutY="114.0" onAction="#Funcionario" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="Funcionario" textFill="WHITE" />
+            <JFXButton layoutY="285.0" onAction="#Venda" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="Venda" textFill="WHITE" />
+            <JFXButton layoutY="457.0" onAction="#Utilizador" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="Utilizadores" textFill="WHITE" />
+            <JFXButton layoutY="228.0" onAction="#Material" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="Material" textFill="WHITE" />
+            <JFXButton layoutY="580.0" onAction="#Sair" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="SAIR" textFill="WHITE" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/UHYY5653.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/HMRG0616.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/DKFZ7969.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/user_icon.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/ATYA3017.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="19.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/RUNZ3430.PNG" />
+               </image>
+            </ImageView>
+            <JFXButton layoutY="400.0" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="Relatório" textFill="WHITE" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="21.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icone_relatorio.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/JXBR9127.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/DROG6420.PNG" />
+               </image>
+            </ImageView>
+            <JFXButton layoutY="57.0" onAction="#Cliente" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="Cliente" textFill="WHITE" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/OMCA6780.PNG" />
+               </image>
+            </ImageView>
+            <JFXButton layoutY="342.0" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="Serviço" textFill="WHITE" />
+         </children>
+      </Pane>
+      <AnchorPane fx:id="PaginaInicialPane" layoutX="216.0" layoutY="67.0" prefHeight="762.0" prefWidth="1153.0" />
+   </children>
+</AnchorPane>

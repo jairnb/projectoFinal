@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.textfield.*?>
+<?import javafx.scene.image.*?>
+<?import org.controlsfx.control.*?>
+<?import jfxtras.scene.layout.*?>
+<?import jfxtras.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="UtilizadorAdcionarAnchorPane" prefHeight="422.0" prefWidth="600.0" style="-fx-border-width: 5 5 5 5; -fx-border-color: #ed9d14;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epconstrucao.controller.UtilizadorAdicionarTelaController">
+    <stylesheets>
+        <URL value="@/epconstrucao/content/estilo.css" />
+    </stylesheets>
+   <children>
+      <Text fill="#ed9d14" layoutX="127.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Adicionar/Editar Utilizador" wrappingWidth="260.40234375" AnchorPane.bottomAnchor="392.0" AnchorPane.topAnchor="26.0" />
+      <Group layoutX="83.0" layoutY="25.0" AnchorPane.rightAnchor="115.0" />
+      <JFXTextField fx:id="nomeTextField" focusColor="#4d4d4d" layoutX="222.0" layoutY="122.0" prefHeight="25.0" prefWidth="244.0" />
+      <Pane layoutX="108.0" layoutY="122.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="8.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <Group AnchorPane.rightAnchor="110.0" />
+      <Group AnchorPane.rightAnchor="110.0" />
+      <Group AnchorPane.rightAnchor="110.0" />
+      <Group layoutX="72.0" layoutY="-80.0" AnchorPane.bottomAnchor="98.6015625" AnchorPane.rightAnchor="126.0">
+         <children>
+            <JFXButton fx:id="buttonCancelar" layoutX="310.0" layoutY="379.0" onAction="#cancelarButton" prefHeight="15.0" prefWidth="92.0" style="-fx-background-color: #f10d0d;" styleClass="btn" stylesheets="@../content/estilo.css" text="Cancelar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/XYAD6708.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buttonGuardarUtilizador" layoutX="202.0" layoutY="379.0" onAction="#ConfirmarButton" prefHeight="15.0" prefWidth="92.0" style="-fx-background-color: gray;" styleClass="btn" stylesheets="@../content/estilo.css" text="Guardar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/WGMP2600.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Group>
+      <Group layoutX="69.0" layoutY="10.0" AnchorPane.rightAnchor="129.0" />
+      <Group layoutX="-14.0" layoutY="-54.0">
+         <children>
+            <JFXComboBox fx:id="tipoUtilizadorCombo" focusColor="#4d4d4d" layoutX="236.0" layoutY="292.0" prefHeight="25.0" prefWidth="244.0" promptText="Selecionar tipo" />
+            <Pane layoutX="122.0" layoutY="292.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+               <children>
+                  <Text layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo" wrappingWidth="51.53125" />
+               </children>
+            </Pane>
+         </children>
+      </Group>
+      <Pane layoutX="108.0" layoutY="177.0" prefHeight="25.0" prefWidth="86.0" style="-fx-border-color: black;">
+         <children>
+            <Text layoutX="9.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="51.53125" />
+         </children>
+      </Pane>
+      <JFXPasswordField fx:id="senhaTextField" layoutX="222.0" layoutY="175.0" prefWidth="244.0" />
+   </children>
+</AnchorPane>
