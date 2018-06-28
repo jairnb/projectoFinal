@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import impl.org.controlsfx.skin.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.geometry.*?>
 <?import com.jfoenix.controls.*?>
@@ -92,6 +95,66 @@
             <JFXButton layoutY="342.0" prefHeight="57.0" prefWidth="216.0" styleClass="btn" stylesheets="@../content/estilo.css" text="Serviço" textFill="WHITE" />
          </children>
       </Pane>
-      <AnchorPane fx:id="PaginaInicialPane" layoutX="216.0" layoutY="67.0" prefHeight="762.0" prefWidth="1153.0" />
+      <AnchorPane fx:id="PaginaInicialPane" layoutX="216.0" layoutY="67.0" prefHeight="762.0" prefWidth="1153.0">
+         <children>
+            <AreaChart layoutX="30.0" layoutY="65.0" prefHeight="300.0" prefWidth="430.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" tickLabelFill="#f27006" />
+              </yAxis>
+            </AreaChart>
+            <StackedAreaChart layoutX="592.0" layoutY="78.0" prefHeight="300.0" prefWidth="430.0">
+              <xAxis>
+                <NumberAxis side="BOTTOM" tickLabelFill="#eb7609" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" tickLabelFill="#ff5500" />
+              </yAxis>
+            </StackedAreaChart>
+            <Pane layoutX="29.0" layoutY="430.0" opacity="0.7" prefHeight="186.0" prefWidth="270.0" style="-fx-background-color: #ffa400; -fx-border-radius: 30;">
+               <children>
+                  <Label layoutX="48.0" layoutY="2.0" text="136" textFill="WHITE">
+                     <font>
+                        <Font size="95.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="51.0" layoutY="119.0" text="Funcionarios" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="391.0" layoutY="432.0" opacity="0.7" prefHeight="186.0" prefWidth="270.0" style="-fx-background-color: #ffa400; -fx-border-radius: 30;">
+               <children>
+                  <Label layoutX="35.0" layoutY="2.0" text="2559" textFill="WHITE">
+                     <font>
+                        <Font size="95.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="91.0" layoutY="119.0" text="Clientes" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="750.0" layoutY="430.0" opacity="0.7" prefHeight="186.0" prefWidth="270.0" style="-fx-background-color: #ffa400; -fx-border-radius: 30;">
+               <children>
+                  <Label layoutX="58.0" layoutY="2.0" text="437" textFill="WHITE">
+                     <font>
+                        <Font size="95.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="71.0" layoutY="119.0" text="Produtos" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

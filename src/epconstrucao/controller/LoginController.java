@@ -5,6 +5,7 @@
  */
 package epconstrucao.controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
@@ -15,7 +16,6 @@ import epconstrucao.model.domain.Utilizador;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,11 +25,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javax.swing.JOptionPane;
 
 /**
@@ -47,9 +44,11 @@ public class LoginController implements Initializable {
     
     @FXML
     private JFXPasswordField senhaTextField;
-      
+    
     @FXML
-    private Button entrarButton;
+    private JFXButton entrarButton;
+      
+    
     private final UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
     private Utilizador utilizador = new Utilizador();
     private final Database database = DatabaseFactory.getDatabase();
@@ -60,7 +59,7 @@ public class LoginController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+       utilizadorDAO.setConexao(conexao);
 //Inicio de validacao de campo*****************************************************************************************
        RequiredFieldValidator validator = new RequiredFieldValidator();
        
@@ -87,11 +86,10 @@ public class LoginController implements Initializable {
                    senhaTextField.validate();
                }
            }
-       });
-       
+       });       
 //FIM DE VALIDACAO DE CAMPO*******************************************************************
        
-        utilizadorDAO.setConexao(conexao);
+        
         
         entrarButton.setOnMouseClicked((MouseEvent e) -> {
             try {
@@ -100,6 +98,8 @@ public class LoginController implements Initializable {
                 Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
+     
+     
         
     }  
     public void login() throws IOException{

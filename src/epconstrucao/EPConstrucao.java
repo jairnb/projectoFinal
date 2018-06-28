@@ -13,7 +13,7 @@ public class EPConstrucao extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("view/segundoInicialAdmin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/Login.fxml"));
         Image image = new Image("/epconstrucao/image/logo.png");
         Scene scene = new Scene(root);
         

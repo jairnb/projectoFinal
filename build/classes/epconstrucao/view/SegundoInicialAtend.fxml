@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import jfxtras.scene.control.*?>
 <?import org.controlsfx.control.*?>
 <?import java.net.*?>
 <?import javafx.scene.paint.*?>
@@ -23,7 +24,19 @@
                   <Image url="@../image/minilogo.png" />
                </image>
             </ImageView>
-            <ComboBox layoutX="1289.0" layoutY="19.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: white;" />
+            <MenuButton fx:id="opcoesButton" layoutX="1285.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: white;" styleClass="btn" stylesheets="@../content/estilo.css">
+              <items>
+                <MenuItem fx:id="mudarSenhaMenuItem" mnemonicParsing="false" text="Mudar Senha" />
+                <MenuItem fx:id="sairMenuItem" mnemonicParsing="false" text="Sair" />
+              </items>
+               <graphic>
+                  <ImageViewButton>
+                     <image>
+                        <Image url="@../image/userImager.PNG" />
+                     </image>
+                  </ImageViewButton>
+               </graphic>
+            </MenuButton>
          </children>
       </Pane>
       <AnchorPane fx:id="PaginaInicialPane" layoutX="216.0" layoutY="67.0" prefHeight="681.0" prefWidth="1153.0" AnchorPane.leftAnchor="197.0" AnchorPane.rightAnchor="20.0">

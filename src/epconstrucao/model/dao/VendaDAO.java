@@ -51,6 +51,8 @@ public class VendaDAO {
                 venda.setIdVenda(resultado.getInt("idVenda"));
                 venda.setDate(resultado.getDate("data").toLocalDate());
                 venda.setValor(resultado.getFloat("preco"));
+                cliente.setIdCliente(resultado.getInt("idCliente"));
+                utilizador.setIdUtilizador(resultado.getInt("idUtilizador"));
                 
                 ClienteDAO clienteDAO = new ClienteDAO();
                 clienteDAO.setConexao(conexao);
@@ -107,7 +109,7 @@ public class VendaDAO {
  
     
     public boolean inserirVenda(Venda venda){
-        String sql = "INSERT INTO venda (data, idCiente, idUtilizador, preco) VALUES (?,?,?,?)";
+        String sql = "INSERT INTO venda (data, idCliente, idUtilizador, preco) VALUES (?,?,?,?)";
         try {
             PreparedStatement stmt = conexao.prepareStatement(sql);
             stmt.setDate(1, Date.valueOf(venda.getDate()));
@@ -129,7 +131,7 @@ public class VendaDAO {
             PreparedStatement stmt = conexao.prepareStatement(sql);
             ResultSet resultado = stmt.executeQuery();     
             if(resultado.next()){
-                venda.setIdVenda(resultado.getInt("idVenda"));
+                venda.setIdVenda(resultado.getInt("max"));
                 return venda;
             }
         } catch (SQLException ex) {

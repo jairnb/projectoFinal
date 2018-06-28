@@ -159,7 +159,7 @@ public class VendaAdicionarTelaController implements Initializable {
                 venda.setValor(venda.getValor() + pedido.getValor());
                 pedidoObserList = FXCollections.observableArrayList(venda.getPedido());
                 vendaTabela.setItems(pedidoObserList);
-                totaLabel.setText(String.format("%.2f", venda.getValor()));
+//                totaLabel.setText(Float.toString(venda.getValor()));
             }
         }
     }

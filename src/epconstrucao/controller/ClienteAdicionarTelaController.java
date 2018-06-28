@@ -6,9 +6,13 @@
 package epconstrucao.controller;
 
 import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.validation.NumberValidator;
+import com.jfoenix.validation.RequiredFieldValidator;
 import epconstrucao.model.domain.Cliente;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.stage.Stage;
@@ -30,7 +34,33 @@ public class ClienteAdicionarTelaController implements Initializable {
     private boolean botaoConfirmar = false;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       RequiredFieldValidator validator = new RequiredFieldValidator();
+       NumberValidator numberValidator = new NumberValidator();
+       
+       nomeTextField.getValidators().add(validator);
+       validator.setMessage("Os campos nao podem ser vazios");
+       
+       nomeTextField.focusedProperty().addListener(new ChangeListener<Boolean>(){
+            
+           @Override
+           public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+               if(!newValue){
+                   nomeTextField.validate();
+               }
+           }
+       });
+       
+       nifTextField.getValidators().add(numberValidator);
+       numberValidator.setMessage("NIF é um campo nunmerico");
+       nifTextField.focusedProperty().addListener(new ChangeListener<Boolean>(){
+            
+           @Override
+           public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+               if(!newValue){
+                   nifTextField.validate();
+               }
+           }
+       });
     }    
 
     

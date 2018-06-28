@@ -8,7 +8,6 @@ package epconstrucao.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import static epconstrucao.controller.LoginController.userAtucalLogado;
 import epconstrucao.model.dao.ClienteDAO;
 import epconstrucao.model.dao.MaterialDAO;
 import epconstrucao.model.database.Database;
@@ -17,22 +16,28 @@ import epconstrucao.model.domain.Cliente;
 import epconstrucao.model.domain.Material;
 import epconstrucao.model.domain.Pedido;
 import epconstrucao.model.domain.Venda;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javax.swing.JOptionPane;
 
 /**
@@ -70,6 +75,12 @@ public class SegundoInicialAtendController implements Initializable {
     private JFXTextField quantidadeTextField;
     @FXML
     private JFXButton adicionarProdutoButton;
+    @FXML
+    private MenuItem mudarSenhaMenuItem;
+    @FXML
+    private MenuItem sairMenuItem;
+    @FXML
+    private AnchorPane SegundoInicialAtendTela;
 
     private final Database bd = DatabaseFactory.getDatabase();
     private final Connection conexao = bd.conectar();
@@ -108,6 +119,10 @@ public class SegundoInicialAtendController implements Initializable {
         
         adicionarProdutoButton.setOnMouseClicked((Event e) -> {
             //prencherTabelaVenda();
+        });
+        
+        sairMenuItem.setOnAction((ActionEvent event) -> {
+            sairButton();
         });
     }    
     
@@ -162,6 +177,17 @@ public class SegundoInicialAtendController implements Initializable {
 //                vendaTabela.setItems(pedidoObserList);
 //            }
 //        }
+    }
+    
+    public void sairButton(){
+        AnchorPane a;
+        try {
+            a = (AnchorPane) FXMLLoader.load(getClass().getResource("/epconstrucao/view/Login.fxml"));
+            SegundoInicialAtendTela.getChildren().setAll(a);
+        } catch (IOException ex) {
+            Logger.getLogger(SegundoInicialAtendController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
     public Venda getVenda() {

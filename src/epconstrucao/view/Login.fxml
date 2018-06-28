@@ -22,7 +22,7 @@
       <Label layoutX="1203.0" layoutY="289.0" prefHeight="30.0" prefWidth="35.0" />
       <JFXTextField fx:id="nomeTextField" focusColor="#12d065" labelFloat="true" layoutX="1065.0" layoutY="289.0" prefHeight="25.0" prefWidth="200.0" promptText="Id Utilizador" />
       <JFXPasswordField fx:id="senhaTextField" focusColor="#07e481" labelFloat="true" layoutX="1065.0" layoutY="346.0" prefHeight="25.0" prefWidth="200.0" promptText="Senha" />
-      <JFXButton fx:id="entrarButton" layoutX="1065.0" layoutY="431.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ED9D14;" text="ENTRAR" />
+      <JFXButton fx:id="entrarButton" layoutX="1065.0" layoutY="431.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ED9D14;" styleClass="btn" stylesheets="@../content/estilo.css" text="ENTRAR" />
       <Label alignment="CENTER" layoutX="1065.0" layoutY="215.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #95989a;" text="INICIAR SESSÃO" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
