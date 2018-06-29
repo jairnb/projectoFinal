@@ -11,7 +11,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="VendaAnchorPane" prefHeight="674.0" prefWidth="1091.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epconstrucao.controller.VendaAdicionarTelaController">
+<AnchorPane id="AnchorPane" fx:id="VendaAnchorPane" prefHeight="706.0" prefWidth="1121.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epconstrucao.controller.VendaAdicionarTelaController">
     <stylesheets>
         <URL value="@/epconstrucao/content/estilo.css" />
     </stylesheets>
@@ -40,7 +40,6 @@
       </ImageView>
       <Group layoutX="6.0" layoutY="5.0">
          <children>
-            <Text layoutX="1085.0" layoutY="691.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: bold;" text="\$" wrappingWidth="20.009765625" />
             <Text layoutX="877.0" layoutY="693.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30; -fx-font-weight: bold;" text="Total=" wrappingWidth="101.009765625" />
          </children>
       </Group>
@@ -71,6 +70,6 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <Label fx:id="totalLabel" layoutX="777.0" layoutY="653.0" prefHeight="31.0" prefWidth="101.0" />
+      <JFXTextField fx:id="totalTextField" layoutX="983.0" layoutY="673.0" prefHeight="25.0" prefWidth="111.0" />
    </children>
 </AnchorPane>

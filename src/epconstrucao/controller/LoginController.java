@@ -108,21 +108,22 @@ public class LoginController implements Initializable {
         utilizadorForm.setNome( nomeTextField.getText());
         utilizadorForm.setSenha(senhaTextField.getText());
         
-        
-        
-        utilizador = utilizadorDAO.SelecionarUsuario(utilizadorForm);
-        nomeUsuerActualLogado = nomeTextField.getText().toUpperCase();
-        tipoUsuerActualLogado = utilizador.getTipo().toUpperCase();
-        userAtucalLogado = utilizador;
+        utilizador = utilizadorDAO.SelecionarUsuario(utilizadorForm); 
         
         if(utilizador != null){
             if(utilizador.getSenha().equals(utilizadorForm.getSenha()) && utilizador.getNome().equals(utilizadorForm.getNome())){
+                nomeUsuerActualLogado = nomeTextField.getText().toUpperCase();
+                tipoUsuerActualLogado = utilizador.getTipo().toUpperCase();
+                userAtucalLogado = utilizador;
+                
                 if(utilizador.getTipo().equals("Administrador")){
-                  AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/epconstrucao/view/segundoInicialAdmin.fxml"));
-                  loginAnchorPane.getChildren().setAll(a);
+                    AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/epconstrucao/view/segundoInicialAdmin.fxml"));
+                    loginAnchorPane.getChildren().setAll(a);
                 }else if(utilizador.getTipo().equals("Vendedor")){
-                 AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/epconstrucao/view/SegundoInicialAtend.fxml"));
-                 loginAnchorPane.getChildren().setAll(a);
+                    AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/epconstrucao/view/SegundoInicialAtend.fxml"));
+                    loginAnchorPane.getChildren().setAll(a);
+                }else{
+                    JOptionPane.showMessageDialog(null,"Nome ou Senha Invalido");
                 }             
             } 
         }else{

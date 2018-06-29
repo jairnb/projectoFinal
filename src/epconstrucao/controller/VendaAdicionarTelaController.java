@@ -55,7 +55,7 @@ public class VendaAdicionarTelaController implements Initializable {
     @FXML
     private TableColumn<Pedido, Integer> codigoColuna;
     @FXML
-    private Label totaLabel;
+    private JFXTextField totalTextField;
     @FXML
     private TableColumn<Pedido, String> nomeMaterialColuna;
     @FXML
@@ -135,12 +135,9 @@ public class VendaAdicionarTelaController implements Initializable {
         int quantidade = Integer.parseInt(quantidadeTextField.getText());
         Material materialCombo = (Material) produtoCombo.getValue();
         Material basedadosMaterial = materialDAO.selecionarMaterialUnico(materialCombo);
-        total = quantidade * basedadosMaterial.getPreco();
-        if(quantidade > basedadosMaterial.getQuantidade()){
-            JOptionPane.showMessageDialog(null, "Quandidade indisponivel \n Stock Atual "+basedadosMaterial.getQuantidade());
-        }else{
-            precoTotalTextField.setText(Float.toString(total));
-        }        
+        total = quantidade * basedadosMaterial.getPreco();        
+        precoTotalTextField.setText(Float.toString(total));
+              
     }
     
     public void preencherTabela(){
@@ -153,14 +150,13 @@ public class VendaAdicionarTelaController implements Initializable {
                 pedido.setQuantidade(quantidade);
                 pedido.setValor(materialCombo.getPreco()*quantidade);
                 venda.getPedido().add(pedido);
-                //venda.setUtilizador(userAtucalLogado);
-               // venda.setCliente((Cliente) clienteCombo.getSelectionModel().getSelectedItem());
-                //venda.setDate(LocalDate.now());
                 venda.setValor(venda.getValor() + pedido.getValor());
                 pedidoObserList = FXCollections.observableArrayList(venda.getPedido());
                 vendaTabela.setItems(pedidoObserList);
-//                totaLabel.setText(Float.toString(venda.getValor()));
-            }
+                totalTextField.setText(Float.toString(venda.getValor()));
+            }//else{
+                //JOptionPane.showMessageDialog(null, "Quandidade indisponivel \n Stock Atual "+materialCombo.getQuantidade());
+            //}
         }
     }
 

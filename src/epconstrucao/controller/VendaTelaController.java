@@ -72,11 +72,11 @@ public class VendaTelaController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         vendaDAO.setConexao(conexao);
         
-        carregartabela();
+        carregarTabela();
     } 
     
     
-    public void carregartabela(){
+    public void carregarTabela(){
         dataColuna.setCellValueFactory(new PropertyValueFactory<>("date"));
         funcionarioColuna.setCellValueFactory(new PropertyValueFactory<>("utilizador"));
         codigoColuna.setCellValueFactory(new PropertyValueFactory<>("idVenda"));
@@ -89,7 +89,7 @@ public class VendaTelaController implements Initializable {
     }
     
     @FXML
-    public void addVenda() throws IOException{
+    public void addVenda() throws IOException, SQLException{
         Venda venda = new Venda();
         List<Pedido> pedidos = new ArrayList<>();
         venda.setPedido(pedidos);
@@ -108,7 +108,14 @@ public class VendaTelaController implements Initializable {
                     material.setQuantidade(material.getQuantidade() - p.getQuantidade());
                     materialDAO.editarMaterial(material);
                 }
+                conexao.commit();
+                carregarTabela();
             } catch (SQLException ex) {
+                try{
+                    conexao.rollback();
+                }catch (SQLException ex1) {
+                    Logger.getLogger(VendaTelaController.class.getName()).log(Level.SEVERE, null, ex1);
+                }                
                 Logger.getLogger(VendaTelaController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
